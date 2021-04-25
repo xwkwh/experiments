@@ -1,12 +1,15 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"reflect"
 )
 
 func main() {
+	os.Exit(200)
+	log.Fatal(777)
 	Stat("/Users/tobyguo/gopath/src/experiments/swag/os/main.go")
 	//fmt.Print(111)
 	Stat("./main.go")
@@ -23,6 +26,8 @@ func Stat(dir string) {
 		log.Println(er)
 
 	}
+
+	fmt.Println(111)
 }
 
 func underlyingError(err error) error {
